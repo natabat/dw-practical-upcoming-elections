@@ -1,0 +1,14 @@
+<div class="election_results">
+    <h1>Upcoming Elections for<br/>{{place}}</h1>
+    <table border="1">
+        <th>Description</th><th>Date</th><th>Find My Polling Place</th><th>Early Voting Starts</th>
+        {{#each elections}}
+        <tr>
+            <td>{{this.description}}</td>
+            <td>{{dateFormat this.date "MM-DD-YYYY"}}</td>
+            <td><a href="{{this.polling-place-url}}">Find My Polling Place</a></td>
+            <td>{{dateFormat this.early_start "MM-DD-YYYY"}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
